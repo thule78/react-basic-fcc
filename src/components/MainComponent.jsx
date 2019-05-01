@@ -1,5 +1,7 @@
 import React from 'react'
 
+import ListItem from './ListItem'
+
 function MainComponent (){
   const date = new Date()
   const yyyy =  date.getFullYear()
@@ -22,10 +24,9 @@ function MainComponent (){
     <p>Today: {`${getdate}`}</p>
       <h3>Your todo list of this {`${timeOfDay}`}</h3>
       <div>
-        <input type="checkbox" />
-        <p> 2 hours lesson </p>
-        <input type="checkbox" />
-        <p> 1 hour yoga class</p>
+        <ListItem />
+        <ListItem />
+        <ListItem />
       </div>
     </div>
     )

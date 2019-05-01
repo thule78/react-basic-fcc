@@ -4,11 +4,11 @@ import React from 'react'
 function Navbar (){
   return(
     <div>
-      <nav>
+      <nav className="navbar">
         <ul>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
+          <li>Home</li>
+          <li>Todo List</li>
+          <li>About</li>
         </ul>
       </nav>
     </div>

@@ -3,16 +3,10 @@ import ReactDOM from 'react-dom';
 
 import '../assets/stylesheets/application.scss';
 
-const Hello = ({ name }) => {
-  return (
-    <div>
-      Hello,
-      {name}
-    </div>
-  );
-};
 
-const root = document.getElementById('root');
-if (root) {
-  ReactDOM.render(<Hello name="World" />, root);
-}
+  ReactDOM.render(<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+  </ul>, document.getElementById("root"));
+

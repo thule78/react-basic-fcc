@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom';
 
 import '../assets/stylesheets/application.scss';
 
-import MyInfo from './components/MyInfo'
+import App from './components/App';
 
-
-  ReactDOM.render(<MyInfo />, document.getElementById("root"));
+  ReactDOM.render(<App />, document.getElementById("root"));
 

@@ -5,6 +5,7 @@ import ContactCard from './ContactCard'
 import Joke from './Joke'
 import jokesData from './JokesData'
 
+
 function MainComponent (){
   const date = new Date()
   const yyyy =  date.getFullYear()

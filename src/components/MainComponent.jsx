@@ -2,6 +2,7 @@ import React from 'react'
 
 import ListItem from './ListItem'
 import ContactCard from './ContactCard'
+import Joke from './Joke'
 
 function MainComponent (){
   const date = new Date()
@@ -30,13 +31,15 @@ function MainComponent (){
         <ListItem />
       </div>
       <div>
+        <Joke question= 'What is the name of the last King'
+        answer= "it's me" />
+        <Joke question= ''
+        answer= "I don't know"/>
+        <Joke question= 'How to say 55555 in Thai?'
+        answer= " "/>
+      </div>
+      <div>
         <ContactCard
-          contact = {{imgURL: "https://picsum.photos/200", name: "Thule", phone: "090-234-5678", email: "abc@gmail.com"}}
-         />
-         <ContactCard
-          contact = {{imgURL: "https://picsum.photos/200", name: "Thule", phone: "090-234-5678", email: "abc@gmail.com"}}
-         />
-         <ContactCard
           contact = {{imgURL: "https://picsum.photos/200", name: "Thule", phone: "090-234-5678", email: "abc@gmail.com"}}
          />
       </div>

@@ -1,13 +1,13 @@
 import React from 'react'
 
-function Product (props){
+function Item (props){
   return(
     <div>
-      <p>Name: {props.name}</p>
-      <p>Price:${props.price}</p>
-      <p>{props.description}</p>
+      <p>Name: {props.item.name}</p>
+      <p>Price:${props.item.price}</p>
+      <p>{props.item.description}</p>
     </div>
     )
 }
 
-export default Product
+export default Item

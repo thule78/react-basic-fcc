@@ -3,6 +3,8 @@ import React from 'react'
 import ListItem from './ListItem'
 import ContactCard from './ContactCard'
 import Joke from './Joke'
+import jokesData from './JokesData'
+
 
 function MainComponent (){
   const date = new Date()
@@ -20,6 +22,12 @@ function MainComponent (){
       timeOfDay = "Evening"
     }
 
+  const jokeComponents = jokesData.map((joke)=> {
+    return (
+      <Joke key={joke.id} question={joke.question} answer={joke.answer}/>
+      )
+  })
+
 
   return (
     <div>
@@ -31,17 +39,15 @@ function MainComponent (){
         <ListItem />
       </div>
       <div>
-        <Joke question= 'What is the name of the last King'
-        answer= "it's me" />
-        <Joke question= ''
-        answer= "I don't know"/>
-        <Joke question= 'How to say 55555 in Thai?'
-        answer= " "/>
+          {jokeComponents}
       </div>
       <div>
         <ContactCard
-          contact = {{imgURL: "https://picsum.photos/200", name: "Thule", phone: "090-234-5678", email: "abc@gmail.com"}}
-         />
+          contact={{
+            name: "ThuLe",
+            imgURL: "https://picsum.photos/200",
+            phone: "090-123-5678",
+            email: "abc@gmail.com"}} />
       </div>
     </div>
     )

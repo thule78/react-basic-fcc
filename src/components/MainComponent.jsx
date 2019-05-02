@@ -1,6 +1,7 @@
 import React from 'react'
 
 import ListItem from './ListItem'
+import ContactCard from './ContactCard'
 
 function MainComponent (){
   const date = new Date()
@@ -27,6 +28,17 @@ function MainComponent (){
         <ListItem />
         <ListItem />
         <ListItem />
+      </div>
+      <div>
+        <ContactCard
+          contact = {{imgURL: "https://picsum.photos/200", name: "Thule", phone: "090-234-5678", email: "abc@gmail.com"}}
+         />
+         <ContactCard
+          contact = {{imgURL: "https://picsum.photos/200", name: "Thule", phone: "090-234-5678", email: "abc@gmail.com"}}
+         />
+         <ContactCard
+          contact = {{imgURL: "https://picsum.photos/200", name: "Thule", phone: "090-234-5678", email: "abc@gmail.com"}}
+         />
       </div>
     </div>
     )

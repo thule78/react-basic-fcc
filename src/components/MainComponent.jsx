@@ -4,6 +4,8 @@ import ListItem from './ListItem'
 import ContactCard from './ContactCard'
 import Joke from './Joke'
 import jokesData from './JokesData'
+import Product from './Product'
+import products from './ProductData'
 
 
 function MainComponent (){
@@ -28,6 +30,12 @@ function MainComponent (){
       )
   })
 
+  const productComponents = products.map((product) =>{
+    return (
+      <Product key={product.id} name={product.name} price={product.price} description={product.description} />
+      )
+  })
+
 
   return (
     <div>
@@ -38,9 +46,15 @@ function MainComponent (){
         <ListItem />
         <ListItem />
       </div>
+      <hr />
       <div>
           {jokeComponents}
       </div>
+      <hr />
+      <div>
+        {productComponents}
+      </div>
+      <hr />
       <div>
         <ContactCard
           contact={{

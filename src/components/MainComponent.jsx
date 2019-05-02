@@ -1,11 +1,7 @@
 import React from 'react'
 
-import ListItem from './ListItem'
-import ContactCard from './ContactCard'
-import Joke from './Joke'
-import jokesData from './JokesData'
-import Item from './Product'
-import products from './ProductData'
+import TodoItem from './TodoItem'
+import todoData from './TodoData'
 
 
 function MainComponent (){
@@ -24,15 +20,9 @@ function MainComponent (){
       timeOfDay = "Evening"
     }
 
-  const jokeComponents = jokesData.map((joke)=> {
+  const todoItem = todoData.map((item)=>{
     return (
-      <Joke key={joke.id} question={joke.question} answer={joke.answer}/>
-      )
-  })
-
-  const productComponents = products.map((product) =>{
-    return (
-      <Item key={product.id} item={product} />
+      <TodoItem key={item.id} item={item}/>
       )
   })
 
@@ -42,26 +32,7 @@ function MainComponent (){
     <p>Today: {`${getdate}`}</p>
       <h3>Your todo list of this {`${timeOfDay}`}</h3>
       <div>
-        <ListItem />
-        <ListItem />
-        <ListItem />
-      </div>
-      <hr />
-      <div>
-          {jokeComponents}
-      </div>
-      <hr />
-      <div>
-        {productComponents}
-      </div>
-      <hr />
-      <div>
-        <ContactCard
-          contact={{
-            name: "ThuLe",
-            imgURL: "https://picsum.photos/200",
-            phone: "090-123-5678",
-            email: "abc@gmail.com"}} />
+        {todoItem}
       </div>
     </div>
     )

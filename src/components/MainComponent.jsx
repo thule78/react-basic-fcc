@@ -3,7 +3,6 @@ import React from 'react'
 import TodoItem from './components/TodoItem'
 import todoData from './components/TodoData'
 
-
 function MainComponent (){
   const date = new Date()
   const yyyy =  date.getFullYear()
@@ -31,7 +30,7 @@ function MainComponent (){
     <p>Today: {`${getdate}`}</p>
       <h3>Your todo list of this {`${timeOfDay}`}</h3>
       <div>
-      {todoItems}
+        {todoItems}
 
       </div>
 

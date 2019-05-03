@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
-import ListItem from './ListItem'
-import ContactCard from './ContactCard'
-import Joke from './Joke'
+import TodoItem from 'TodoItem';
+import todoData from 'TodoData'
+
 
 function MainComponent (){
   const date = new Date()
@@ -20,30 +20,20 @@ function MainComponent (){
       timeOfDay = "Evening"
     }
 
+  const todoItems =todoData.map((item)=>{
+    return (
+      <TodoItem item={item} key={item.id} />
+      )
+  })
 
   return (
     <div>
     <p>Today: {`${getdate}`}</p>
       <h3>Your todo list of this {`${timeOfDay}`}</h3>
       <div>
-        <ListItem />
-        <ListItem />
-        <ListItem />
+
       </div>
-      <div>
-        <Joke
-          question= "How to say 5555555 in Thai?"
-          answer= "hahhahahahha"
-        />
-      </div>
-      <div>
-        <ContactCard
-          contact={{
-            name: "ThuLe",
-            imgURL: "https://picsum.photos/200",
-            phone: "090-123-5678",
-            email: "abc@gmail.com"}} />
-      </div>
+
     </div>
     )
 }

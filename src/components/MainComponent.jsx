@@ -1,6 +1,7 @@
 import React from 'react'
 
-import todoList from './components/TodoList'
+import TodoItem from './components/TodoItem'
+import todoData from './components/TodoData'
 
 function MainComponent (){
   const date = new Date()
@@ -17,9 +18,10 @@ function MainComponent (){
     }else {
       timeOfDay = "Evening"
     }
-  const todoItems = todoList.map((item)=>{
-    return(
-      <TodoItem key={item.id} item={item}/>
+
+  const todoItems =todoData.map((item)=>{
+    return (
+      <TodoItem item={item} key={item.id} />
       )
   })
 
@@ -29,7 +31,9 @@ function MainComponent (){
       <h3>Your todo list of this {`${timeOfDay}`}</h3>
       <div>
         {todoItems}
+
       </div>
+
     </div>
     )
 }

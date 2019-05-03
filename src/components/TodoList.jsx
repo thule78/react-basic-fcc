@@ -1,5 +1,5 @@
-const todoData = [
-  {
+const todoList = [
+   {
         id: 1,
         text: "Take out the trash",
         completed: true
@@ -24,6 +24,7 @@ const todoData = [
         text: "Catch up on Arrested Development",
         completed: false
     }
+
 ]
 
-export default todoData
+export default todoList

@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
-import TodoItem from 'TodoItem';
-import todoData from 'TodoData'
+import TodoItem from './components/TodoItem'
+import todoData from './components/TodoData'
 
 
 function MainComponent (){
@@ -31,6 +31,7 @@ function MainComponent (){
     <p>Today: {`${getdate}`}</p>
       <h3>Your todo list of this {`${timeOfDay}`}</h3>
       <div>
+      {todoItems}
 
       </div>
 

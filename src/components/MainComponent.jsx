@@ -19,19 +19,18 @@ function MainComponent (){
       timeOfDay = "Evening"
     }
 
-  const todoItem = todoData.map((item)=>{
-    return (
-      <TodoItem key={item.id} item={item}/>
-      )
-  })
+  const todoItems = todoData.map((item)=>{
+    <TodoItem key={item.id} item={item} />
+  }
 
+    )
 
   return (
     <div>
     <p>Today: {`${getdate}`}</p>
       <h3>Your todo list of this {`${timeOfDay}`}</h3>
       <div>
-        {todoItem}
+        {todoItems}
       </div>
     </div>
     )

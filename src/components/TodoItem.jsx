@@ -5,7 +5,6 @@ function TodoItem (props){
     <div>
     <input type="check" checked={props.item.completed}/>
     <p>{props.item.text}</p>
-
     </div>
   )
 }
